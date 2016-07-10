@@ -29,7 +29,7 @@ gulp.task('clean-generated-assets', function (done) {
   );
 });
 
-gulp.task('copy-docs-assets', function(done) {
+gulp.task('copy-docs-assets', function (done) {
   var copyDoc = exec('cp -rvf docs/doc_assets/* docs/assets ', function (error, stdout, stderr) {
     if (stdout && /[\w\d]+/.test(stdout)) {
       dutil.logData('copy-docs-assets', stdout);
@@ -40,7 +40,7 @@ gulp.task('copy-docs-assets', function(done) {
 
 });
 
-gulp.task('make-bundled-javascript-dirs', function(done) {
+gulp.task('make-bundled-javascript-dirs', function (done) {
   var makeBundledJavaScriptDirs = spawn('mkdir', [
     '-p',
     'docs/assets/js/vendor'
@@ -81,7 +81,7 @@ gulp.task('copy-bundled-javascript', function (done) {
 
 });
 
-gulp.task('make-fonts-dirs', function(done) {
+gulp.task('make-fonts-dirs', function (done) {
   var makeFontsDirs = spawn('mkdir', [
     '-p',
     'docs/assets/fonts'
@@ -114,7 +114,7 @@ gulp.task('copy-fonts', function (done) {
 
 });
 
-gulp.task('make-images-dirs', function(done) {
+gulp.task('make-images-dirs', function (done) {
   var makeImagesDirs = spawn('mkdir', [
     '-p',
     'docs/assets/img'

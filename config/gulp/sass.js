@@ -98,7 +98,6 @@ gulp.task(task, [ 'scss-lint' ], function (done) {
   dutil.logMessage(task, 'Compiling Sass');
 
   var entryFile = 'src/stylesheets/all.scss';
-
   var defaultStream = gulp.src(entryFile)
     .pipe(
       sass({ outputStyle: 'expanded' })
@@ -111,8 +110,8 @@ gulp.task(task, [ 'scss-lint' ], function (done) {
       })
     )
     .pipe(rename({ basename: dutil.pkg.name }))
-    .pipe(gulp.dest('../dist/css'))
-    .pipe(gulp.dest('../docs/dist/css'));
+    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('docs/dist/css'));
 
   var minifiedStream = gulp.src(entryFile)
     .pipe(sourcemaps.init({ loadMaps: true }))
@@ -131,8 +130,8 @@ gulp.task(task, [ 'scss-lint' ], function (done) {
         suffix: '.min',
       }))
     .pipe(sourcemaps.write('.', { addComment: false }))
-    .pipe(gulp.dest('../dist/css'))
-    .pipe(gulp.dest('../docs/dist/css'));
+    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('docs/dist/css'));
 
   var streams = merge(defaultStream, minifiedStream);
 
