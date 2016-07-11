@@ -8,17 +8,18 @@
 
   // Load an assertion library. You can use any assertion library you want. Here, we use a lightly-modified
   // version of Chai.
-  var assert = require('./assert.js');
+  var assert = require('../../vendor/assert.js');
 
   // Load Quixote.
-  var quixote = require('./quixote.js');
+  var quixote = require('../../vendor/quixote.js');
 
   // Define a test suite using Mocha's standard `define` function.
   describe('Media Object CSS', function () {
-
+    this.timeout(60000);
     // Variables used by our tests. They're populated in the `before()` and `beforeEach()` functions.
     var frame;
     var media;    // The Quixote test frame.
+    var buttons;
     var button;
 
     // Use Mocha's standard `before` function to set up our Quixote test frame before the tests run.
@@ -26,7 +27,7 @@
       // Create the frame and load our stylesheet.
       frame = quixote.createFrame({
         // The URL of our stylesheet. It's served by Karma and configured in `build/config/karma.conf.js`.
-        stylesheet: 'base/docs/bootstrap/css/bootstrap.css',
+        src: '/css'
         //stylesheet: 'base/dist/css/uswds.css',
       }, done);   // This is an asynchronous operation, so we pass in Mocha's `done` callback.
     });
@@ -46,30 +47,17 @@
       // to make debugging easier.
       frame.reset();
 
-      // Create the HTML needed for our media object. This also acts as documentation for how the media
-      // object CSS is supposed to be used. Quixote will return an object we can use to make assertions about
-      // how the media element is styled.
-      media = frame.add(
-        // There's a containing <div>...
-        "<div class='btn btn-default'>",
-        // Give the HTML a name so Quixote's error messages are more readable. If we don't provide a name,
-        // Quixote will use the HTML by default. That would be pretty ugly.
-        'default button'
-      );
-
       // Get the media element's figure and body elements. Quixote gives us an object we can use to make
       // assertions about how the elements are styled.
-      button = frame.get('.btn-default');
+      button = frame.get('[data-example-id="btn-tags"] > a');
     });
 
-    // Our first test. We use Mocha's standard `it()` function to define the test. Here, we're checking that
-    // the `figure` element in our media element is positioned to the left. The test definition reads
-    // '[The media object CSS] positions figure to the left of [its] container.'
     it('should have centered text', function () {
-      // Tell Quixote to make an assertion about the `figure` element.
+      assert.equal(button.getRawStyle('text-align'), 'center', 'should be centered');
+    });
 
-        // Check that the left edge of the figure is the same as the left edge of the test frame's <body> element.
-        assert.equal(button.getRawStyle("text-align"), "center", "should be centered");
+    it('should be blue', function () {
+      assert.equal(button.getRawStyle('background-color'), 'blue', 'should be centered');
     });
 
   });

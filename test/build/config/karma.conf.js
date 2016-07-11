@@ -17,7 +17,7 @@
       // list of files / patterns to load in the browser
       files: [
         'test/specs/**/*.js',
-        //'vendor/**/*.js',
+        'test/vendor/**/*.js',
 
         // QUIXOTE: Serve the CSS file so we can load it in our tests
         // Mark it `included: false` so Karma doesn't load it automatically
@@ -30,10 +30,32 @@
       // list of files to exclude
       exclude: [],
 
+      // Serve the documentation so that we can pull in elements for testing
+      proxies: {
+        '/css': {
+          'target': 'http://localhost:9001/css',
+          'changeOrigin': true
+        },
+        '/components': {
+          'target': 'http://localhost:9001/components',
+          'changeOrigin': true
+        },
+        '/javascript': {
+          'target': 'http://localhost:9001/javascript',
+          'changeOrigin': true
+        },
+        '/bootstrap': {
+          'target' : 'http://localhost:9001/bootstrap'
+        },
+        '/assets': {
+          'target' : 'http://localhost:9001/assets'
+        }
+      },
+
       // preprocess matching files before serving them to the browser
       // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
       preprocessors: {
-        'test/specs/**/*.js': [ 'commonjs' ]
+        'test/**/*.js': [ 'commonjs' ]
       },
 
       // test results reporter to use

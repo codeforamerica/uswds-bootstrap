@@ -19,11 +19,14 @@ Each bootstrap component, (e.g. table, button group, modal) should have its own 
 
 Note that standards do not exist for every Bootstrap component. In some instances, design choices have been inferred. In other cases, the default is vanilla Bootstrap.
 
-##Testing Framework
+##Running Tests
 
-Use Jake as a task runner:
+Tests are run on the documentation site. This way, you can also visually inspect what is being tested. Karma serves as a proxy to the documentation site, and then individual elements are pulled in and tested.
+
+Start Karma using Jake:
 `./jake.sh karma`
 
 Open a browser window to `localhost:9876`. You should see a green status bar. Note: Webkit based browsers run much slower if this tab is not visible. Make sure to run your terminal commands with the browser window in view or you may get a timeout error.
 
-`./jake.sh test`
+`./jake.sh test` (to run tests once)
+`./watch.js test` (to run tests whenever files are changed)
