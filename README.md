@@ -22,4 +22,8 @@ Note that standards do not exist for every Bootstrap component. In some instance
 ##Testing Framework
 
 Use Jake as a task runner:
-`npm install jake -g`
+`./jake.sh karma`
+
+Open a browser window to `localhost:9876`. You should see a green status bar. Note: Webkit based browsers run much slower if this tab is not visible. Make sure to run your terminal commands with the browser window in view or you may get a timeout error.
+
+`./jake.sh test`

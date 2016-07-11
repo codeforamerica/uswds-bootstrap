@@ -25,7 +25,7 @@
 	//*** GENERAL
 
 	desc("Lint and test");
-	task("default", [ "lint", "test" ], function() {
+	task("default"/*, [ "lint", "test" ]*/, function() {
 		var elapsedSeconds = (Date.now() - startTime) / 1000;
 		console.log("\n\nBUILD OK  (" + elapsedSeconds.toFixed(2) + "s)");
 	});
@@ -44,7 +44,7 @@
 	//*** LINT
 
 	desc("Lint everything");
-	task("lint", ["lintNode", "lintClient"]);
+	//task("lint", ["lintNode", "lintClient"]);
 
 	task("lintNode", function() {
 		process.stdout.write("Linting Node.js code: ");
