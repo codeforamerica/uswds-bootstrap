@@ -1,7 +1,7 @@
 {
-  "name": "uswds",
-  "version": "0.9.5",
-  "description": "Open source UI components and visual style guide for U.S. government websites",
+  "name": "uswds-bootstrap",
+  "version": "0.0.1",
+  "description": "A Bootstrap theme based on the open source UI components and visual style guide for U.S. government websites",
   "main": "src/js/start.js",
   "scripts": {
     "prepublish": "bundle && gulp copy-vendor-sass && gulp build",
@@ -23,13 +23,14 @@
     "Marco Segreto <marco.segreto@gsa.gov>",
     "Jeremia Kimelman <jeremia.kimelman@gsa.gov>",
     "Roger Steve Ruiz <roger.ruiz@gsa.gov>",
-    "Julia Elman <julia.elman@gsa.gov>"
+    "Julia Elman <julia.elman@gsa.gov>",
+    "Charlie Weems <charlie@codeforamerica.org>"
   ],
   "license": "SEE LICENSE in LICENSE.md",
   "bugs": {
-    "url": "https://github.com/18F/web-design-standards/issues"
+    "url": "https://github.com/codeforamerica/uswds-bootstrap/issues"
   },
-  "homepage": "https://github.com/18F/web-design-standards#readme",
+  "homepage": "https://github.com/codeforamerica/uswds-bootstrap",
   "dependencies": {
     "bourbon": "^4.2.6",
     "bourbon-neat": "^1.7.3",
