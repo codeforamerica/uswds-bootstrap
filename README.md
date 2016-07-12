@@ -9,7 +9,7 @@ The semantic grid pattern (e.g. `class="one-half"`) has not been included. Inste
 
 To run the Jekyll site for the documentation, do `bundle exec jekyll serve`.
 
-Running `gulp build` will build the USWDS styles and pipe them to the `dist` and `docs/dist/` directories.
+Running `gulp build` will build the USWDS styles and pipe them to the `dist` and `docs/dist/` directories. You may have to save in order to initiate the build.
 
 #Testing
 

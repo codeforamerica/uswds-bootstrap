@@ -2,8 +2,6 @@
 //
 require( './config/gulp/flags' );
 require( './config/gulp/sass' );
-require( './config/gulp/javascript' );
-require( './config/gulp/images' );
 require( './config/gulp/fonts' );
 require( './config/gulp/website' );
 require( './config/gulp/build' );

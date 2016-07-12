@@ -26,21 +26,22 @@ gulp.task('clean-dist', function (done) {
 
 gulp.task('build', function (done) {
 
+  gulp.watch([
+    'src/stylesheets/**/*.scss',
+  ], function (event) {
+    runSequence(
+      'clean-dist',
+      [
+        'sass',
+        'fonts',
+      ]
+    );
+  });
+
   dutil.logIntroduction();
   dutil.logMessage(
     'build',
     'Creating distribution directories.'
-  );
-
-  runSequence(
-    'clean-dist',
-    [
-      'sass',
-      //'javascript',
-      //'images',
-      'fonts',
-    ],
-    done
   );
 
 });

@@ -228,26 +228,6 @@ gulp.task(taskServe, [ 'bundle-gems' ], function (done) {
       'copy-docs-assets'
     );
   });
-  gulp.watch([
-    'src/js/**/*.js',
-    '!src/js/vendor/**/*',
-  ], function (event) {
-    runSequence(
-      'javascript',
-      'clean-bundled-javascript',
-      'make-bundled-javascript-dirs',
-      'copy-bundled-javascript',
-      'copy-docs-assets'
-    );
-  });
-  gulp.watch('src/img/**/*', function (event) {
-    runSequence(
-      'images',
-      'make-images-dirs',
-      'copy-images',
-      'copy-docs-assets'
-    );
-  });
   gulp.watch('src/fonts/**/*', function (event) {
     runSequence(
       'fonts',
