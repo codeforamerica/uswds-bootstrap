@@ -1,5 +1,5 @@
 <div class="bs-docs-section">
-  <h1 id="type" class="page-header">Typography</h1>
+  <h1 id="type" class="page-header">Typography <span class="label label-success">Passing</span></h1>
 
   <!-- Headings -->
   <h2 id="type-headings">Headings</h2>
@@ -8,40 +8,54 @@
     <table class="table">
       <tbody>
         <tr>
-          <td><h1>h1. Bootstrap heading</h1></td>
+          <td><h1>h1. USWDS heading</h1></td>
           <td class="type-info">Semibold 36px</td>
         </tr>
         <tr>
-          <td><h2>h2. Bootstrap heading</h2></td>
+          <td><h2>h2. USWDS heading</h2></td>
           <td class="type-info">Semibold 30px</td>
         </tr>
         <tr>
-          <td><h3>h3. Bootstrap heading</h3></td>
+          <td><h3>h3. USWDS heading</h3></td>
           <td class="type-info">Semibold 24px</td>
         </tr>
         <tr>
-          <td><h4>h4. Bootstrap heading</h4></td>
+          <td><h4>h4. USWDS heading</h4></td>
           <td class="type-info">Semibold 18px</td>
         </tr>
         <tr>
-          <td><h5>h5. Bootstrap heading</h5></td>
+          <td><h5>h5. USWDS heading</h5></td>
           <td class="type-info">Semibold 14px</td>
         </tr>
         <tr>
-          <td><h6>h6. Bootstrap heading</h6></td>
+          <td><h6>h6. USWDS heading</h6></td>
           <td class="type-info">Semibold 12px</td>
         </tr>
       </tbody>
     </table>
   </div>
 {% highlight html %}
-<h1>h1. Bootstrap heading</h1>
-<h2>h2. Bootstrap heading</h2>
-<h3>h3. Bootstrap heading</h3>
-<h4>h4. Bootstrap heading</h4>
-<h5>h5. Bootstrap heading</h5>
-<h6>h6. Bootstrap heading</h6>
+<h1>h1. USWDS heading</h1>
+<h2>h2. USWDS heading</h2>
+<h3>h3. USWDS heading</h3>
+<h4>h4. USWDS heading</h4>
+<h5>h5. USWDS heading</h5>
+<h6>h6. USWDS heading</h6>
 {% endhighlight %}
+  <p>Make headings blue by adding the <code>.heading-blue</code> class.
+  <div class="bs-example bs-example-type" data-example-id="simple-headings">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td><h1 class="heading-blue">h1. USWDS heading</h1></td>
+          <td class="type-info">Semibold 36px</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  {% highlight html %}
+  <h1 class="heading-blue">h1. USWDS heading</h1>
+  {% endhighlight %}
 
   <p>Create lighter, secondary text in any heading with a generic <code>&lt;small&gt;</code> tag or the <code>.small</code> class.</p>
   <div class="bs-example bs-example-type" data-example-id="small-headings">
@@ -245,9 +259,9 @@ You can use the mark tag to <mark>highlight</mark> text.
   <p>Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with <code>&lt;br&gt;</code>.</p>
   <div class="bs-example" data-example-id="simple-address">
     <address>
-      <strong>Twitter, Inc.</strong><br>
-      1355 Market Street, Suite 900<br>
-      San Francisco, CA 94103<br>
+      <strong>Library of Congress</strong><br>
+      101 Independence Ave SE<br>
+      Washington, DC 20540<br>
       <abbr title="Phone">P:</abbr> (123) 456-7890
     </address>
     <address>
@@ -257,9 +271,9 @@ You can use the mark tag to <mark>highlight</mark> text.
   </div>
 {% highlight html %}
 <address>
-  <strong>Twitter, Inc.</strong><br>
-  1355 Market Street, Suite 900<br>
-  San Francisco, CA 94103<br>
+  <strong>Library of Congress</strong><br>
+  101 Independence Ave SE<br>
+  Washington, DC 20540<br>
   <abbr title="Phone">P:</abbr> (123) 456-7890
 </address>
 

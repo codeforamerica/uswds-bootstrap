@@ -1,11 +1,73 @@
-table {
+.table {
   border-spacing: 0;
   margin: 2em 0;
   min-width: 100%;
 
   thead {
-    th {
-      background-color: $color-gray-lightest;
+    tr {
+      th {
+        background-color: $color-gray-lightest;
+        border-bottom: 1px solid $color-gray;
+      }
+    }
+  }
+  tbody {
+    tr {
+      th,
+      td {
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid $color-gray;
+
+      }
+
+      //Intentionally leaving .active blank so that it inherits from Bootstrap
+      //USWDS doesn't have a lighter color that doesn't match the header row
+
+      &.success {
+        th,
+        td {
+          background-color: $color-green-lightest;
+        }
+      }
+
+      &.info {
+        th,
+        td {
+          background-color: $color-cool-blue-lightest;
+        }
+      }
+
+      &.warning {
+        th,
+        td {
+          background-color: $color-gold-lightest;
+        }
+      }
+
+      &.danger {
+        th,
+        td {
+          background-color: $color-secondary-lightest;
+        }
+      }
+  }
+
+  }
+
+  &.table-bordered {
+    thead {
+      tr:first-child {
+        border-top: 1px solid $color-gray;
+      }
+      tr {
+        th {
+          border-bottom: 1px solid $color-gray;
+        }
+      }
+    }
+    th, td {
+      border: 1px solid $color-gray;
     }
   }
 
@@ -17,30 +79,5 @@ table {
     th {
       font-weight: $font-normal;
     }
-  }
-
-  th,
-  td {
-    background-color: $color-white;
-    border: 1px solid $color-gray;
-    padding: 1.5rem;
-  }
-}
-
-.usa-table-borderless {
-  thead {
-    tr {
-      background-color: transparent;
-    }
-
-    th {
-      border-top: 0;
-    }
-  }
-
-  th,
-  td {
-    border-left: 0;
-    border-right: 0;
   }
 }

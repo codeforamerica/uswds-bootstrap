@@ -25,6 +25,7 @@
         //Serve both Bootstrap and the USWDS Bootstrap Theme
         { pattern: 'docs/bootstrap/css/bootstrap.css', included: false },
         { pattern: 'dist/css/uswds.css', included: false },
+        { pattern: 'test/testframe.html', included: false },
       ],
 
       // list of files to exclude
@@ -32,23 +33,15 @@
 
       // Serve the documentation so that we can pull in elements for testing
       proxies: {
-        '/css': {
-          'target': 'http://localhost:9001/css',
-          'changeOrigin': true
-        },
-        '/components': {
-          'target': 'http://localhost:9001/components',
-          'changeOrigin': true
-        },
-        '/javascript': {
-          'target': 'http://localhost:9001/javascript',
+        '/test-frame': {
+          'target': 'http://localhost:9001/test-frame',
           'changeOrigin': true
         },
         '/bootstrap': {
           'target' : 'http://localhost:9001/bootstrap'
         },
-        '/assets': {
-          'target' : 'http://localhost:9001/assets'
+        '/dist': {
+          'target' : 'http://localhost:9001/dist'
         }
       },
 

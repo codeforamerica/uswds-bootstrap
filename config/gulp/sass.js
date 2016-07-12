@@ -99,19 +99,21 @@ gulp.task(task, [ 'scss-lint' ], function (done) {
 
   var entryFile = 'src/stylesheets/all.scss';
   var defaultStream = gulp.src(entryFile)
-    .pipe(
-      sass({ outputStyle: 'expanded' })
-        .on('error', sass.logError)
-    )
-    .pipe(
-      autoprefixer({
-        browsers: supportedBrowsers,
-        cascade: false,
-      })
-    )
-    .pipe(rename({ basename: dutil.pkg.name }))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(gulp.dest('docs/dist/css'));
+    .pipe(sourcemaps.init())
+      .pipe(
+        sass({ outputStyle: 'expanded' })
+          .on('error', sass.logError)
+      )
+      .pipe(
+        autoprefixer({
+          browsers: supportedBrowsers,
+          cascade: false,
+        })
+      )
+      .pipe(sourcemaps.write())
+      .pipe(rename({ basename: dutil.pkg.name }))
+      .pipe(gulp.dest('dist/css'))
+      .pipe(gulp.dest('docs/dist/css'));
 
   var minifiedStream = gulp.src(entryFile)
     .pipe(sourcemaps.init({ loadMaps: true }))

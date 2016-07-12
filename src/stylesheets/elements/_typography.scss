@@ -5,6 +5,7 @@ html {
 
 body {
   font-size: $base-font-size;
+  font-family: $font-sans;
 }
 
 p {
@@ -16,6 +17,7 @@ p {
 a {
   color: $color-primary;
   text-decoration: underline;
+  font-family: inherit;
 
   &:hover,
   &:active {
@@ -29,6 +31,14 @@ a {
   &:focus {
     box-shadow: $focus-shadow;
     outline: 0;
+  }
+}
+
+blockquote {
+  border-color: $color-primary;
+
+  &.blockquote-reverse {
+    border-color: $color-primary;
   }
 }
 
@@ -74,6 +84,11 @@ h6 {
   line-height: $heading-line-height;
   margin-bottom: .5em;
   margin-top: 1.5em;
+
+  &.heading-blue {
+    color: $color-primary;
+  }
+
 }
 
 // Create heading mixins
@@ -196,10 +211,11 @@ dfn {
   }
 }
 
-.usa-font-lead {
+.lead {
   font-family: $font-serif;
   font-size: $lead-font-size;
   line-height: $lead-line-height;
+  font-weight: $font-normal;
 }
 
 .usa-image-block {
