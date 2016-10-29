@@ -259,3 +259,38 @@ dfn {
   font-size: $h6-font-size;
   margin-top: 0;
 }
+
+.text-muted {
+  color: #aeb0b5;
+}
+
+.text-primary {
+  color: $color-primary;
+}
+
+.text-success {
+  color: $color-green;
+}
+
+.text-info {
+  color: $color-primary-alt;
+}
+
+.text-warning {
+  color: $color-gold;
+}
+
+.text-danger {
+  color: $color-secondary;
+}
+
+code {
+  color: $color-secondary;
+  background-color: $color-secondary-lightest;
+}
+
+pre {
+  border-radius: 0;
+  border: transparent;
+  background-color: $color-gray-lightest;
+}

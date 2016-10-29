@@ -66,33 +66,25 @@ h4 code {
 
 /* Bootstrap "B" icon */
 .bs-docs-booticon {
-  display: block;
+  display: inline-block;
+  font-size: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   font-weight: 500;
   color: #fff;
   text-align: center;
   cursor: default;
   background-color: #0071bc;
-  border-radius: 15%;
+  border-radius: 20px;
 }
-.bs-docs-booticon-sm {
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  line-height: 28px;
-}
-.bs-docs-booticon-lg {
-  width: 144px;
-  height: 144px;
-  font-size: 108px;
-  line-height: 140px;
-}
+
 .bs-docs-booticon-inverse {
   color: #0071bc;
   background-color: #fff;
 }
 .bs-docs-booticon-outline {
   background-color: transparent;
-  border: 1px solid #cdbfe3;
+  border: 3px solid #fff;
 }
 
 
@@ -859,9 +851,9 @@ h1[id] {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #eee;
-  background-color: rgba(86,61,124,.15);
+  background-color: #e1f3f8;
   border: 1px solid #ddd;
-  border: 1px solid rgba(86,61,124,.2);
+  border: 1px solid #9bdaf1;
 }
 
 

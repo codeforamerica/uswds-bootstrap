@@ -69,3 +69,13 @@
     }
   }
 }
+
+//Override link underline for nav items
+
+ul, .nav {
+  li {
+    a {
+      text-decoration: none;
+    }
+  }
+}

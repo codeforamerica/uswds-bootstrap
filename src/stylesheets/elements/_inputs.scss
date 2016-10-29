@@ -35,7 +35,7 @@ input[type="time"],
 input[type="week"],
 textarea,
 select {
-  appearance: none;
+  //appearance: none;
   border: $input-border-width solid $color-gray;
   border-radius: 0;
   box-sizing: border-box;
@@ -44,8 +44,6 @@ select {
   font-size: $base-font-size;
   height: $input-height;
   line-height: $input-line-height;
-  margin: 0.2em 0;
-  max-width: $input-max-width;
   outline: none;
   padding: $input-padding-vertical 0.7em;
   width: 100%;
@@ -55,7 +53,7 @@ select {
     box-shadow: $focus-shadow;
   }
 
-  &.usa-input-success {
+  &.has-success {
     border: 3px solid $color-green-light;
   }
 }
@@ -151,7 +149,7 @@ legend {
 input[type="checkbox"],
 input[type="radio"] {
   margin-left: -2rem;
-  opacity: 0;
+  //opacity: 0;
   position: absolute;
 
   .lt-ie9 & {
@@ -338,15 +336,8 @@ input[type=range]:focus::-ms-thumb {
   }
 }
 
-.usa-form-group-day,
-.usa-form-group-month,
-.usa-form-group-year {
-  clear: none;
-  float: left;
-  margin-right: 1.5rem;
-  width: 5rem;
-}
-
-.usa-form-group-year {
-  width: 7rem;
+.input-group-addon {
+  color: #5b616b;
+  border-radius: 0px;
+  border-color: #5b616b;
 }
